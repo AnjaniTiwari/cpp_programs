@@ -14,17 +14,18 @@ public:
     {
         cout<<n1<<" "<<n2<<endl;
     }
-    friend void copyNo(Complex); //friend function declaration
+    friend void add(Complex); //friend function declaration
 };
-void copyNo(Complex c)  //friend function definition
-{
-   cout<<"sum ="<<c.n1+c.n2;
-}
+
 int main()
 {
     Complex c1;
     c1.setData(1,2);
     c1.showData();
-    copyNo(c1);     //friend function call
+    add(c1);     //friend function call
 
+}
+void add(Complex c)  //friend function definition
+{
+   cout<<"sum ="<<c.n1+c.n2;
 }
